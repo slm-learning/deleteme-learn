@@ -28,6 +28,11 @@ jobs:
     runs_on: ubuntu-latest
     steps:
       run:|
-      echo "Hello world !"
+      echo "Homedrive: ${{ inputs.homedrive }}"
+      echo "Log level: ${{ inputs.logLevel }}"
+      echo "Tag source: ${{ inputs.tag }}"
+      echo "Environment ${{ inputs.environment }}"
+    name: Workflow Inputs
+    if: ${{ github.event_name == 'workflow_dispatch' }}
 
 
