@@ -3,7 +3,7 @@ on: push
 jobs:
   Example-Actions-Job:
     name: Exploring GitHub Actions
-    runs-on: my-self-hosted
+    runs-on: self-hosted
     steps:
       # Display the event that triggered the workflow
       - run: echo "The job was triggered by a ${{ github.event_name }} event."
