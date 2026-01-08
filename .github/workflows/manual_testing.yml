@@ -1,6 +1,11 @@
 name: manual trigger
 
 on:
+  pull_request:
+    types:
+      - opened
+      - labeled
+    
   workflow_dispatch:
     inputs:
       homedrive:
