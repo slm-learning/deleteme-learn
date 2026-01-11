@@ -50,7 +50,9 @@ jobs:
 
   Second-Job:
     name: The second job running on another runner
+    environment: prod
     runs-on: windows-latest
     needs: Example-Actions-Job
     steps:
       - run: echo "This job is now running on a ${{ runner.os }} server hosted by GitHub."
+      - run: echo "Ma variable ${{ MA_VARIABLE_TEST }}"
