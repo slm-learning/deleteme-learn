@@ -3,7 +3,7 @@ on: push
 jobs:
   Example-Actions-Job:
     name: Exploring GitHub Actions
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       # Display the event that triggered the workflow
       - run: echo "The job was triggered by a ${{ github.event_name }} event."
@@ -51,7 +51,7 @@ jobs:
   Second-Job:
     name: The second job running on another runner
     environment: prod
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     needs: Example-Actions-Job
     steps:
       - run: echo "This job is now running on a ${{ runner.os }} server hosted by GitHub."
