@@ -55,4 +55,4 @@ jobs:
     needs: Example-Actions-Job
     steps:
       - run: echo "This job is now running on a ${{ runner.os }} server hosted by GitHub."
-      - run: echo "Ma variable ${{ MA_VARIABLE_TEST }}"
+      - run: echo "Ma variable ${{ $MA_VARIABLE_TEST }}"
